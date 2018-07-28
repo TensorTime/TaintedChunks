@@ -5,6 +5,7 @@ import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
@@ -14,7 +15,7 @@ public class TaintedChunks
 	@Instance("taintedchunks")
 	public static TaintedChunks instance;
 	
-	@SidedProxy(clientSide="com.tensortime.taintedchunks.proxy.ClientProxy", serverSide="com.tensortime.taintedchunks.proxy.ServerProxy")
+	@SidedProxy(clientSide=Reference.CLIENT_PROXY_CLASS, serverSide=Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
 
     private static Logger logger;
@@ -30,8 +31,14 @@ public class TaintedChunks
     public void init(FMLInitializationEvent event)
     {
         // some example code
-        logger.info("Let the taint begin...");
+        logger.info("Configuring taints...");
     }
     
+    @EventHandler
+    public void postInit(FMLPostInitializationEvent event)
+    {
+        // some example code
+        logger.info("Let the taint begin...");
+    }
     
 }
