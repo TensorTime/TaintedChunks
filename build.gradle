@@ -64,15 +64,15 @@ repositories {
 }
 
 dependencies {
-    deobfProvided "mezz.jei:jei_1.12.2:4.11.0.204:api"
-    deobfProvided "CraftTweaker2:CraftTweaker2-API:4.1.9.486"
+    
     deobfProvided "mcp.mobius.waila:Hwyla:1.8.26-B41_1.12.2"
     deobfProvided "mcjty.theoneprobe:TheOneProbe-1.12:1.12-1.4.23-16"
-   
+    
     deobfCompile "net.darkhax.bookshelf:Bookshelf-1.12.2:2.3.553"
     deobfCompile "net.darkhax.gamestages:GameStages-1.12.2:2.0.95"
-
-    runtime "mezz.jei:jei_1.12.2:4.11.0.204"
+    deobfCompile "net.darkhax.mobstages:MobStages-1.12.2:2.0.8"
+ 	deobfCompile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.+"
+    deobfCompile "mezz.jei:jei_1.12.2:4.11.0.204"
 }
 
 processResources {
