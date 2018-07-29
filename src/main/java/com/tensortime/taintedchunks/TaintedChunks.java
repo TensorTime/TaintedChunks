@@ -1,5 +1,7 @@
 package com.tensortime.taintedchunks;
 import com.tensortime.taintedchunks.proxy.CommonProxy;
+import com.tensortime.taintedchunks.utils.Reference;
+
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -25,20 +27,22 @@ public class TaintedChunks
     public void preInit(FMLPreInitializationEvent event)
     {
         logger = event.getModLog();
+        logger.info("Taint Listens...");
+
     }
 
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
         // some example code
-        logger.info("Configuring taints...");
+        logger.info("Taint Learns...");
     }
     
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
         // some example code
-        logger.info("Let the taint begin...");
+        logger.info("Taint Spreads...");
     }
     
 }
